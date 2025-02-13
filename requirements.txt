@@ -1,12 +1,11 @@
-setuptools
-wheel
-joblib 
+﻿joblib 
 matplotlib==3.10.0
-numpy>=2.2.2
+numpy==1.25
 pandas==1.5.3
 plotly==5.24.1
 requests
-scikit-learn 
+scikit-learn==1.6.1 
 streamlit==1.40.1
+seaborn
 
 

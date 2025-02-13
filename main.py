@@ -337,7 +337,8 @@ if page == pages[3] :                         # Page modélisation CO2
 
     # Évaluer les performances du modèle
     mse_rf = mean_squared_error(y_test, y_pred_rf)
-    rmse_rf = mean_squared_error(y_test, y_pred_rf, squared=False)
+    rmse_rf = np.sqrt(mse_rf)  # On prend la racine carrée manuellement
+
     r2_rf = r2_score(y_test, y_pred_rf)
     mae_rf = mean_absolute_error(y_test, y_pred_rf)
 
@@ -472,7 +473,7 @@ if page == pages[3] :                         # Page modélisation CO2
 
 # Évaluer les performances
     mse_rf_ = mean_squared_error(y_test, y_pred_rf)
-    rmse_rf_ = mean_squared_error(y_test, y_pred_rf, squared=False)
+    rmse_rf_ = np.sqrt(mse_rf_ )  # On prend la racine carrée manuellement
     r2_rf_ = r2_score(y_test, y_pred_rf)
 
 # Tracer les valeurs réelles et les prédictions avec Plotly
