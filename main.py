@@ -15,7 +15,7 @@ from sklearn.metrics import mean_squared_error, r2_score, mean_absolute_error
 @st.cache_data
 def load_temp():
     # Convertir la colonne "year" au bon format
-    temp_data = pd.read_csv("GLB.Ts+dSST_.csv", skiprows=1)
+    temp_data =pd.read_csv("data/GLB.Ts+dSST_.csv", skiprows=1)
     temp_data['Year'] = temp_data['Year'].apply(lambda x: int(str(x).replace(",", "")))
     return temp_data
 
@@ -23,7 +23,7 @@ def load_temp():
 @st.cache_data
 def load_co2_pays():
     # Convertir la colonne "year" au bon format
-    co2_pays_data = pd.read_csv("df_20_co2_pays.xls")
+    co2_pays_data = pd.read_csv("data/df_20_co2_pays.xls")
     co2_pays_data['year'] = co2_pays_data['year'].apply(lambda x: int(str(x).replace(",", "")))
     return co2_pays_data
  
@@ -31,7 +31,7 @@ def load_co2_pays():
 @st.cache_data
 def load_co2_region():
     # Convertir la colonne "year" au bon format
-    co2_region_data = pd.read_csv("df_20_co2_region_2.csv")
+    co2_region_data = pd.read_csv("data/df_20_co2_region_2.csv")
     co2_region_data['year'] = co2_region_data['year'].apply(lambda x: int(str(x).replace(",", "")))
     return co2_region_data
 
@@ -39,7 +39,7 @@ def load_co2_region():
 @st.cache_data
 def load_df_zone():
     # Convertir la colonne "year" au bon format
-    df_zone = pd.read_csv("zone_temp.csv")
+    df_zone = pd.read_csv("data/zone_temp.csv")
     return df_zone
 
 # Chargement des données
