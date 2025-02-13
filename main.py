@@ -66,10 +66,12 @@ pages=["Introduction",
        "Modélisations & Prédiction", 
        "Conclusion & Perspective"]
 page=st.sidebar.radio("Aller vers", pages)
-# Ajout des auteurs du projet
+
+# AUTEURS DU PROJET
+
 st.sidebar.title("Auteurs")
 # st.sidebar.write("A. Diakhaté") # Sans le lien vers LinkedIn
-st.sidebar.markdown("[A. Diakhaté](https://www.linkedin.com/in/a-diakhate-5a998265/)")
+st.sidebar.markdown("A. Diakhaté: [LinkedIn](https://www.linkedin.com/in/a-diakhate-5a998265/)")
 st.sidebar.write("A. De-Polignac")
 st.sidebar.write("H. Dridi")
 
